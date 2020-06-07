@@ -1,0 +1,8 @@
+test_login_element:
+  - ["xpath",'//*[@id="id_username"]']
+  - ["xpath",'//*[@id="id_password"]']
+  - ["xpath",'//*[@id="panel-login"]/div[2]/button']
+  - ["xpath",'//*[@id="top-nav"]/div[1]/a']
+
+test_login_data:
+  -  ["admin","yoyo123456","后台页面"]
