@@ -1,0 +1,14 @@
+test_account_element:
+  - ["xpath",'//*[@id="left-side"]/ul[1]/li[10]']
+  - ["xpath",'//*[@id="content-block"]/div[1]/div[2]/div/a']
+  - ["xpath",'//*[@id="id_card_id"]']
+  - ["xpath",'//*[@id="id_card_user"]']
+  - ["xpath",'//*[@id="id_carddetail-0-tel"]']
+  - ["xpath",'//*[@id="id_carddetail-0-mail"]']
+  - ["xpath",'//*[@id="id_carddetail-0-city"]']
+  - ["xpath",'//*[@id="id_carddetail-0-address"]']
+  - ["xpath",'//*[@id="card_form"]/div[2]/button']
+  - ["xpath",'//*[@id="content-block"]/div[2]']
+
+test_add_account_data:
+  -  ["admin","yoyo123456","后台页面"]

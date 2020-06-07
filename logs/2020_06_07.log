@@ -73,3 +73,9 @@
 2020-06-07 19:36:39,440 - root - INFO - 正在定位元素信息：定位方式->xpath,value值->//*[@id="top-nav"]/div[1]/a
 2020-06-07 19:36:39,557 - root - INFO - 获取到元素的文本内容：后台页面
 2020-06-07 19:36:39,560 - root - INFO - 登录结果：True
+2020-06-07 21:51:24,777 - root - INFO - 正在定位元素信息：定位方式->xpath,value值->//*[@id="id_username"]
+2020-06-07 21:51:25,070 - root - INFO - 正在定位元素信息：定位方式->xpath,value值->//*[@id="id_password"]
+2020-06-07 21:51:25,361 - root - INFO - 正在定位元素信息：定位方式->xpath,value值->//*[@id="panel-login"]/div[2]/button
+2020-06-07 21:51:29,042 - root - INFO - 正在定位元素信息：定位方式->xpath,value值->//*[@id="top-nav"]/div[1]/a
+2020-06-07 21:51:29,151 - root - INFO - 获取到元素的文本内容：后台页面
+2020-06-07 21:51:29,153 - root - INFO - 登录结果：True
