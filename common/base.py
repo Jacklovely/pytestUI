@@ -46,11 +46,10 @@ class Base():
             self.log.info("正在定位元素信息：定位方式->%s,value值->%s" % (locator[0], locator[1]))
             #print("正在定位元素信息：定位方式->%s,value值->%s"%(locator[0],locator[1]))
             try:
-                eles = WebDriverWait(self.driver,self.timeout,self.t).until(
-                    EC.presence_of_elements_located(locator))
-            except TimeoutException:
-                raise ElementNotFound("定位元素出现超时!")
-            raise eles
+                eles = WebDriverWait(self.driver, self.timeout, self.t).until(EC.presence_of_all_elements_located(locator))
+            except TimeoutException as msg:
+                raise ElementNotFound("定位元素出现超时！")
+            return eles
 
     def writein(self,locator,text = ""):
         '''写入文本'''

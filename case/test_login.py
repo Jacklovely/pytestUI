@@ -12,7 +12,8 @@ class Test_login():
 
     @allure.feature("功能点：用户登录页面")
     @allure.story("用例：用户登录")
-    @pytest.mark.parametrize("username,password,msg",testdata["test_login_data"])
+    @pytest.mark.parametrize("username,password,msg",testdata["test_login_data"],
+                             ids = ["正常用户名密码登录"])
     def test_login(self,username,password,msg):
         driver = webdriver.Chrome()
         web = LoginPage(driver)

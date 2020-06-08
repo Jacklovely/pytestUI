@@ -30,7 +30,7 @@ class LoginPage(Base):
 
     def is_login_success(self, expect_text='后台页面'):
         text = self.get_text(self.loc4)
-        self.log.info("获取到元素的文本内容：%s"%text)
+        self.log.info("获取到断言元素的文本内容：%s"%text)
         return expect_text == text
 
 if __name__ == '__main__':

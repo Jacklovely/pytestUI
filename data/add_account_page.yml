@@ -1,5 +1,5 @@
 test_account_element:
-  - ["xpath",'//*[@id="left-side"]/ul[1]/li[10]']
+  - ["xpath",'//*[@href="/xadmin/hello/card/"]']
   - ["xpath",'//*[@id="content-block"]/div[1]/div[2]/div/a']
   - ["xpath",'//*[@id="id_card_id"]']
   - ["xpath",'//*[@id="id_card_user"]']
@@ -11,4 +11,4 @@ test_account_element:
   - ["xpath",'//*[@id="content-block"]/div[2]']
 
 test_add_account_data:
-  -  ["admin","yoyo123456","后台页面"]
+  -  ["123456","秋水","123456","123456","测试","男","添加成功"]
