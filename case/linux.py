@@ -7,7 +7,7 @@ def is_windows_linux():
     '''判断当前系统是windows还是linux:
     一般linux结果为('32bit','ELF')ELF或者('64bit','ELF')ELF,
     windows为（'32bit','windowsPE'）,或者（'64bit','windowsPE'）'''
-    if platform.system()=='windows':
+    if platform.system()=='Windows':
         chrome_options = Options()
         chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度，高度
         chrome_options.add_argument('--headless')  # 无界面

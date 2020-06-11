@@ -14,8 +14,8 @@ class Test_login():
     @allure.story("用例：用户登录")
     @pytest.mark.parametrize("username,password,msg",testdata["test_login_data"],
                              ids = ["正常用户名密码登录"])
-    def test_login(self,username,password,msg):
-        driver = webdriver.Chrome()
+    def test_login(self,driver,username,password,msg):
+        #driver = webdriver.Chrome()
         web = LoginPage(driver)
         web.login(user=username,password=password)
         result = web.is_login_success(expect_text=msg)
