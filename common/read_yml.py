@@ -10,7 +10,7 @@ class ReadYaml():
     def get_yaml_data(self):
         with open(self.filepath,'r',encoding='utf-8')as f:
             #调用load方法加载文件流
-            return yaml.load(f)
+            return yaml.load(f,Loader=yaml.FullLoader)
 
 if __name__ == '__main__':
     data = ReadYaml("login_page.yml").get_yaml_data()
