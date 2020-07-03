@@ -4,12 +4,14 @@ from selenium import webdriver
 from pages.login_page import LoginPage
 import pytest
 import time
+from common.log import Log
 from selenium.webdriver.chrome.options import Options
+log = Log()
 @pytest.fixture(scope="session")
-def login_fixtrue():
+def login_fixtrue(driver):
     #登录前置操作
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    #driver = webdriver.Chrome()
+    #driver.maximize_window()
     web = LoginPage(driver)
     web.login()
     return driver
@@ -25,10 +27,10 @@ def driver(request):
         chrome_options = Options()
         chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度，高度
         chrome_options.add_argument('--headless')  # 无界面
-        print("当前运行的操作系统为windows")
+        log.info("当前运行的操作系统为windows")
         _driver = webdriver.Chrome(chrome_options=chrome_options)
     else:
-        print('当前运行的操作系统为linux')
+        log.info('当前运行的操作系统为linux')
         chrome_options = Options()
         chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度，高度
         chrome_options.add_argument('--no-sandbox')#解决DevToolsActivePort文件不存在报错问题
@@ -38,7 +40,7 @@ def driver(request):
         _driver = webdriver.Chrome(chrome_options=chrome_options)
 
     def end():
-        print("全部用例执行完后 teardown quit dirver")
+        log.info("全部用例执行完后 teardown quit dirver")
         time.sleep(5)
         _driver.quit()
     request.addfinalizer(end)
