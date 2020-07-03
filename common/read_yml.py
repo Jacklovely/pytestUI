@@ -13,6 +13,6 @@ class ReadYaml():
             return yaml.load(f)
 
 if __name__ == '__main__':
-    data = ReadYaml("login_page.yml").get_yaml_data()
-    username = data["test_login_element"][0]
-    print(tuple(username))
+    data = ReadYaml("add_account_page.yml").get_yaml_data()
+    username = data["test_add_account_data2"][0]
+    print(username)

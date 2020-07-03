@@ -14,7 +14,8 @@ class Add_Account(Base):
     loc8 = tuple(testelement["test_account_element"][7])  # 性别
     loc9 = tuple(testelement["test_account_element"][8])  # 保存
     loc10 = tuple(testelement["test_account_element"][9]) # 新增成功校验
-    loc11 = tuple(testelement["test_account_element"][10]) #账号，姓名为空校验
+    loc11 = tuple(testelement["test_account_element"][10]) #账号为空校验
+    loc12 = tuple(testelement["test_account_element"][11]) #姓名为空校验
 
     def click_account(self):
         '''点击银行卡账号'''
@@ -28,7 +29,7 @@ class Add_Account(Base):
         '''输入卡号'''
         self.writein(self.loc3,text)
 
-    def input_name(self,text = "test"):
+    def input_name(self,text = " "):
         '''输入姓名'''
         self.writein(self.loc4,text)
 
@@ -57,7 +58,7 @@ class Add_Account(Base):
         self.log.info("获取到断言元素的文本内容：%s" %text)
         return expect_text in text
 
-    def is_add_fail(self, expect_text='请填写此字段'):
+    def is_add_fail1(self, expect_text='这个字段是必须的'):
         text = self.get_text(self.loc11)
         self.log.info("获取到断言元素的文本内容：%s" %text)
         return expect_text in text
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     account.input_city()
     account.input_sex()
     account.click_save()
-    account.is_add_success()
+    account.is_add_fail()
     driver.quit()
     
 
