@@ -14,6 +14,7 @@ class Test_login():
     @allure.story("用例：用户登录")
     @pytest.mark.parametrize("username,password,msg",testdata["test_login_success_data"],
                              ids = ["正确用户名密码登录"])
+    @pytest.mark.skip('跳过该成功用例')
     def test_success_login(self,driver,username,password,msg):
         #driver = webdriver.Chrome()
         web = LoginPage(driver)
