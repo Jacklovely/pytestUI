@@ -11,7 +11,9 @@ class Test_Add_Account():
     @allure.feature("功能点：添加银行卡账户")
     @allure.story("用例：添加银行卡账户")
     @pytest.mark.parametrize("card_num,name,phone,mail,city,sex,msg",testdata["test_add_account_data"],
-                             ids=["正常添加"])
+                             ids=["正常添加",
+                                  "正常添加",
+                                  "正常添加"])
     def test_add_account(self, login_fixtrue,card_num, name, phone,mail,city,sex,msg):
         driver = login_fixtrue
         account = Add_Account(driver)
@@ -38,7 +40,7 @@ class Test_Add_Account():
             self.log.info("登录结果：%s"%result)
         with allure.step("断言：判断是否添加成功"):
             assert result == True
-        driver.quit()
+        #driver.quit()
 
 
 
