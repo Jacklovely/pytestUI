@@ -19,7 +19,7 @@ class Base():
     '''基于原生selenium二次封装'''
     log = Log()
     def __init__(self,driver:webdriver.Chrome,timeout = 10,t = 0.5):
-        url = "http://*********"
+        url = "http://49.235.92.12:8020/xadmin"
         self.base_url = url
         self.driver = driver
         self.timeout = timeout
