@@ -70,6 +70,12 @@ class Add_Account(Base):
         self.log.info("获取到断言元素的文本内容：%s" % text)
         return expect_text in text
 
+    def is_add_fail2(self, expect_text='这个字段是必须的'):
+        '''姓名为空断言'''
+        text = self.get_text(self.loc12)
+        self.log.info("获取到断言元素的文本内容：%s" %text)
+        return expect_text in text
+
 if __name__ == '__main__':
     from pages.login_page import LoginPage
     from selenium import webdriver

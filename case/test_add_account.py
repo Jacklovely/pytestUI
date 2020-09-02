@@ -35,7 +35,7 @@ class Test_Add_Account():
             account.click_save()
         with allure.step("获取结果: 获取页面实际结果，判断是否添加成功"):
             result = account.is_add_success(expect_text=msg)
-            self.log.info("登录结果：%s"%result)
+            self.log.info("断言结果：%s"%result)
         with allure.step("断言：判断是否添加成功"):
             assert result == True
         #driver.quit()
@@ -44,7 +44,7 @@ class Test_Add_Account():
     @allure.story("用例：添加银行卡账户")
     @pytest.mark.parametrize("card_num,name,phone,mail,city,sex,msg",testdata["test_add_account_data2"],
                              ids=["账号为空添加"])
-    def test_add_account(self, login_fixtrue,card_num, name, phone,mail,city,sex,msg):
+    def test_add_account1(self, login_fixtrue,card_num, name, phone,mail,city,sex,msg):
         driver = login_fixtrue
         account = Add_Account(driver)
         with allure.step("点击银行卡账户，跳转添加账户页面"):
@@ -67,7 +67,7 @@ class Test_Add_Account():
             account.click_save()
         with allure.step("获取结果: 获取页面实际结果，判断是否添加成功"):
             result = account.is_add_fail1(expect_text=msg)
-            self.log.info("登录结果：%s"%result)
+            self.log.info("断言结果：%s"%result)
         with allure.step("断言：判断是否添加成功"):
             assert result == True
         #driver.quit()
