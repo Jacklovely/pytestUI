@@ -29,6 +29,7 @@ class Test_login():
     @pytest.mark.parametrize("username,password,msg", testdata["test_login_fail_data"],
                              ids=["正确用户名错误密码登录",
                                   "错误用户名正确密码登录"])
+    @pytest.mark.skip('跳过')
     def test_fail_login(self,driver,username,password,msg):
         #driver = webdriver.Chrome()
         web = LoginPage(driver)
