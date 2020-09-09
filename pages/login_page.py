@@ -14,7 +14,7 @@ class LoginPage(Base):
         '''输入用户名'''
         self.writein(self.loc1, text)
 
-    def input_password(self, text="yoyo123456"):
+    def input_password(self, text="123456"):
         '''输入用户名'''
         self.writein(self.loc2, text)
 
@@ -22,7 +22,7 @@ class LoginPage(Base):
         '''点击登录按钮'''
         self.click(self.loc3)
 
-    def login(self, user="admin", password="yoyo123456"):
+    def login(self, user="admin", password="123456"):
         '''登录'''
         self.driver.get(self.base_url)
         self.input_username(user)
