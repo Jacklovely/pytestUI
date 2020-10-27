@@ -14,7 +14,7 @@ Click==7.0
 colorama==0.4.3
 colorlog==4.1.0
 crypto==1.4.1
-cryptography==2.9.2
+cryptography==3.2
 filetype==1.0.7
 Flask==1.1.1
 har2case==0.3.1
