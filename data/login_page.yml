@@ -6,7 +6,7 @@ test_login_element:
   - ["xpath",'//*[@id="panel-login"]/div[2]/div[1]/ul']
 
 test_login_success_data:
-  -  ["admin","yoyo123456","后台页面"]
+  -  ["admin","123456","后台页面"]
 test_login_fail_data:
   -  ["admin","123456","请输入正确的用户名和密码"]
-  -  ["test","yoyo123456","请输入正确的用户名和密码"]
+  -  ["test","123456","请输入正确的用户名和密码"]
