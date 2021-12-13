@@ -25,7 +25,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.3
 jmespath==0.9.5
 loguru==0.4.1
-lxml==4.5.0
+lxml==4.6.5
 MarkupSafe==1.1.1
 more-itertools==8.2.0
 Naked==0.1.31
